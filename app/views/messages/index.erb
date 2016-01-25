@@ -1,0 +1,30 @@
+
+<% @messages.each do |message| %>
+  <div class="message">
+    <h3><a href="/messages/<%= message.id %>"><%= message.title %></a> <small>(by: <%= message.author %>)</small></h3>
+    <p>
+      <%= message.content %>
+    </p>
+  </div>
+<% end %>
+
+<a href="/messages/new">Post a message... It's FREE (for now)!</a>
+
+
+<!-- <form method="post" action="/messages">
+  <div>
+    <label>Author:</label>  
+    <input type="text" name="author">
+  </div>
+  <div>
+    <label>Title:</label>
+    <input type="text" name="title">
+  </div>
+  <div>
+    <label>Content:</label>
+    <input type="text" name="content">
+  </div>
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+</form> -->
